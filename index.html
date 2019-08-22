@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Paul's New Website</title>
+        <style>
+            body {
+                background: rgb(125, 200, 205);
+                color: rgb(45, 45, 45);
+                padding: 10px;
+                font-family: arial;
+            }
+            header {
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            #all-contents {
+                max-width: 800px;
+                margin: auto;
+            }
+    
+            /* navigation menu */
+            nav {
+                background: rgb(180, 100, 200);
+                margin: 0 auto;
+                margin-bottom:20px;
+                display: flex;
+                padding: 10px;
+                border: solid 10px;
+                /* the border will curve into a 'D' */
+                border-radius: 10px 40px 40px 10px;
+            }
+            nav header {
+                display: flex;
+                align-items: center;
+                color: rgb(255, 255, 255);
+                flex: 1;
+            }
+            nav ul {
+                list-style-image: none;
+            }
+            nav li {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            nav a {
+                text-decoration: none;
+                color: #fff;
+            }
+    
+            /* main container area beneath menu */
+            main {
+                background: rgb(245, 238, 219);
+                display: flex;
+            }
+            .sidebar {
+                margin-right: 25px;
+                padding: 10px;
+            }
+            .sidebar img {
+                width: 200px;
+            }
+            .content {
+                flex: 1;
+                padding: 15px;
+            }
+                   /* portfolio styles */
+            #portfolio {
+                list-style-type: none;
+                padding-left: 0;
+            }
+            
+            #portfolio li {
+                background: #fff;
+                padding: 10px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+            
+            #portfolio li:hover {
+                background: #eee;
+            } 
+            
+            #portfolio a {
+                text-decoration: none;
+                color: #454545;
+            }
+            .interests header {
+                font-size: 1.25em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="all-contents">
+            <nav>
+                <header>Paul's New Site</header>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="studies.html">Studies</a></li>
+                </ul>
+            </nav>
+        
+            <main>
+               <div class="sidebar">
+                   <img src="https://helensedwick.com/wp-content/uploads/2014/12/dreamstime_m_23315175-e1417833911693.jpg">
+               </div>
+               
+               <div class="content">
+                   <header>
+                       Paul Stumpe
+                   </header>
+                   <p>
+                       Operation Spark Particpant
+                   </p>
+                   <section class="interests">
+                       <header>Interests</header>
+                       <ul>
+                           <li>Writing Fiction</li>
+                           <li>Programming</li>
+                           <li>PC Gaming</li>
+                       </ul>
+                   </section>
+               </div>
+            </main>
+        </div>
+    </body>
+</html>
