@@ -34,44 +34,17 @@
  *          WARNING: To pass the bonus test, the LAST full name should have NO
  *          new-line character added after it!
  */
-
-// YOUR CODE GOES BELOW HERE //
-//factory function
-//i
-//contact, fullname, contact again
-//o should return an object that manages contacts. this means it should contain functions for length, addContact,findContact, removeContact
-//constrainsts
-//edgecase
-
-//declare function named makeContactList
-
-    //declare array that holds each contact
-    //write a return statement, the value it returns is an object
-    
-        //inside this object, write function named length
-        //this function returns the number of contacts on the list
-            //
-        
-        //inside this object write function named addconcact
-        //inside this object write function findcontact
-        //inside this object write function removecontact
-
-
-//input
-// Function named factory that takes paramaters id, nameFirst, NameLast
-
-//output a contact object with keys of id nameFirst NameLast
-//returns an object with 
+ 
 
 function makeContact(id, nameFirst, nameLast) {
-//object named factory
 
-    return   {
-        //key value pair for id. id is num type
+
+    return {
         "id": id,
-        //key value pair for nameFirst
         "nameFirst": nameFirst,
         "nameLast": nameLast
+        
+        
     };
 
 //return an object
@@ -84,40 +57,97 @@ function makeContactList() {
     /*
      * You need something here to hold contacts. See length api for a hint:
      */
-    // set contacts to an array
+    // make var contacts, set to an array literal
     var contacts = [];
     
-    
+    //anonymous object we're returning
     return {
+        
+        
+        
         // we implemented the length api for you //
         length: function() {
             return contacts.length;
         },
-        // i: contact (object)
-        // o: 
-        // c: 
-        // e:
+        //above ^^ function named length, takes no arguments, returns length of the contacts array
+        
+        
+        
+        
+        
+        
+        
+        
         addContact: function(contact) {
             // referring to contacts array, use push() with an argument of contact 
             contacts.push(contact);
         },
-        // i: fullName (string)
-        // o: contact object
-        // c: 
-        // e: if contact is not found, return undefined
+        
+        
+//  *      3. findContact(fullName): takes a full-name String, like 'Max Gaudin', and 
+//  *         returns the contact object if found in the contacts-list, or, 
+//  *         undefined if the fullName does not match any contacts in the list.
+//  *      4. removeContact(contact): takes a contact object to be removed from 
+//  *         the contact-list.
+        
         findContact: function(fullName) {
-            // use for loop to iterate through contacts array
-            // set index to 0 while index is less than the length of the contacts array, increment by 1
+            
+            var itsHere = false;
+            
             for (var i = 0; i < contacts.length; i++) {
-                // if fullName is the same as the concatenation of the contact object's 
-                // nameFirst and nameLast, then return the contact object
-                var namesAdded = contacts[i][]
-                // console.log(namesAdded);
-                if (fullName === )
-                // else returned undefined
+                
+                //if the fullname ever matches a contact, it returns true. otherwise loops again
+                if(fullName === contacts[i]["nameFirst"]+ " "+contacts[i]["nameLast"]){
+                    //if this ever matches, set value of var itsHere to true
+                    itsHere = true;
+                    return contacts[i];
+                }
             }
+            if (itsHere === false){
+                return undefined;
+            }
+        },
+        
+        removeContact: function(contact){
+            
+            //use findcontact, if found, then remove via splice
+            
+               
+            
+            for (var i = 0; i < contacts.length; i++) {
+                
+                //if the fullname ever matches a contact, it returns true. otherwise loops again
+                if(contact["nameFirst"]+ " " + contact["nameLast"] === contacts[i]["nameFirst"]+ " "+contacts[i]["nameLast"]){
+                  contacts.splice(i, 1);
+                }
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        },
+        printAllContactNames: function (){
+            
+            
+            let stringToReturn = "";
+            for (let i =0; i <=contacts.length-2; i++){
+                stringToReturn += contacts[i]["nameFirst"] + " " + contacts[i]["nameLast"] + "\n";
+            }
+            stringToReturn += contacts[contacts.length-1]["nameFirst"] + " " + contacts[contacts.length-1]["nameLast"];
+            console.log(stringToReturn);
+            return stringToReturn;
         }
-    }
+        
+        
+    //end of what we're returning
+    };
 }
 
 

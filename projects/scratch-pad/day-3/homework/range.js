@@ -23,9 +23,32 @@
  */
 function range(start, end) {
     // YOUR CODE GOES BELOW HERE //
+       // var wtih array to return
+    var myArray = [];
+    //if first argument greater than second, run this
     
-    
-    
+    if(start > end){
+        //i number and number
+        //o array containing all numbers between start and end, highest to lowest
+        //c
+        //e
+        //for loop starting at start, subtracting one with each iteration, ending when it is equal or less than end
+        for (var i=start; i +1 > end;i-- ){
+            //put each number onto back of myArray
+            myArray.push(i);
+            console.log(i);
+        }
+        
+    //if second argument greater than first run this
+    } else{
+        //for loop starting at start, incrementing up until it reaches or surpasses end
+        for(i = start; i-1 < end; i++){
+            myArray.push(i);
+        }
+        
+    }
+    console.log(myArray);
+    return myArray;
     
     // YOUR CODE GOES ABOVE HERE //
 }
