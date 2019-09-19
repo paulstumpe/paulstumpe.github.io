@@ -65,3 +65,18 @@ console.log(myConstVariable);
 * they're always available to our program, it also can lead to some unusual circumstances a coder
 * must remain aware of.
 */
+
+x = 20
+var x;
+//in this case, the code would work fine, even though we declared
+//x seemingly a line late. This is due to hoisting
+//after hoisting, the code would actually look like this.
+var x;
+x =20
+//similiarly, even if you declare and assign in the same line,
+//hoisting will still occur
+
+var x = 20;
+//becomes
+var x;
+x =20;

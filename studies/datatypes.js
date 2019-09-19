@@ -93,7 +93,9 @@ console.log(Infinity * 3);
 // any number of other data types.
 // Simple data types on the other hand, can not hold other data types. Operations on simple
 // data types always result in a new simple data type. They don't change the original
-// data type. simply alter its value.
+// data, but reassign a binding to a new datapoint. 20 will always be 20. If we look to change 20 to 30
+// by adding 10, we'll simply assign a whole new value of 10 to the binding. Not change that previous 20 
+// to thirty.
 
 // Primitive values are passed to a function BY COPY, complex values are BY REFERENCE. What does that mean, and how are they different?
 // passing by copy means we the computer simply looks at that value held there, and copies it
@@ -107,3 +109,26 @@ console.log(Infinity * 3);
 // adress this PObox is at. If someone needs to get inside, it will point and say thats
 // where the POBOX is. For a simple datatype though, it'll simply jack the mail for you and
 // say "hey man, that letter said '4', want me to copy that down on this new letter too?
+
+// An example of copy by value
+let x = 20
+let y = x
+x = 30
+console.log(x)
+//the value of x here is 30
+console.log(y)
+//the value of y however is still 20. When we set y to the value of x, we looked at what x was set to and
+//gave y the same value. So when we bind x to another number, y doesn't care. It wasn't really set to be 
+//x. It was set to be whatever x was at the time. This is because x was set to a simple data type.
+
+//With complex datatypes, this goes differently. As I described before, complex datatypes are copied by
+//reference, meaning this is closer to an adress when we copy it, instead of just a simple value.
+let complex = [1,2]
+let complexCopy = complex;
+
+complex.push(3);
+
+console.log(complex);
+//complex's value here is now an array of [1,2,3]
+console.log(complexCopy);
+//however, so is complexCopy!. complexCopy is simply looking at the adress complex is using for its data structure. This is the difference between the types of copy assignment in javascript.

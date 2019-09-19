@@ -2,11 +2,17 @@
  * Control-Flow
  * 
  * 
- * 0. In Javascript we cna control the way our code runs just like we do in real life using conditional
+ * 0. In Javascript we can control the way our code runs just like we do in real life using conditional
  * statements or using if and switch statements that exist in javascript
  * 
  * 1. if statements always evaluate to true or false, and they decide to take action based on that evaluation. 
  * the action they take is inside the codeblock. When the if statement is true, it runs the codeblock. if its false, it does nothing
+ * 
+ * 2. Switch statements can be used in place of if statements in some situations, usually chosen to make the
+ * code more legible. If statements compare an input expression with a series of case expressions, and it executes the
+ * codeblock under the case statement it first matches. If it matches none of them, it will execute the default
+ * statement. the case codeblocks MUST be ended with a break statement.
+ * 
  * */
  
 //  Control flow
@@ -37,14 +43,23 @@ else{
 //Switch is an alternative lingo we can use for the same purposes, though it is more limited. It's advantage is that for some code
 //it may be cleaner to write than a very long if else if chain.
 let myVariable = "dark";
+// First we have the switch keyword, letting the computer know that our following code will be a switch statement
+//Inside the parentheses is the expression to search for among our cases.
 switch (myVariable) {
+    //Inside of the curlybraces we have our first case, the string of "light." If myVariable is equal to this
+    //string, then we'll execute the code block inside up until the break statement.
     case 'light':
+        //this is the code that will execute if these expressions are equivalent. if not, we will skip this
+        //and check the next case, "dark"
         console.log("it's light");
+        //this is the break statement. This is NEEDED to tell the computer to stop running the codeblock.
+        //Missing a break statement will not give you appropriate results, if not outright breaking your program.
         break;
     case 'dark':
         console.log("it's dark");
         break;
-    
+    //this is the default statement. It will be ran if our input expression does not match any of the case statements
+    //we have provided above.
     default:
         // code
 }

@@ -7,8 +7,8 @@
 // Explain while, for, and for-in loops
 //while loops will go as long as the condition we state evaluates to true at the 
 // end of the codeblock
-var apple;
-while  (1<apple){
+var apple =5;
+while  (1 < apple){
     apple -1;
 }
 //for loops use a triple set of info in their parentheses. a start condition, an 
@@ -19,7 +19,7 @@ for(var i=1; i<10; i++){
 //for in loops are special loops useful for iterating objects. since objects 
 //don't use a numeric index in the same way arrays do
 //for in loops will let us look over each key value pair in the object.
-var myObject= {};
+var myObject= {apple : 4, oranges : 10, monkeys : 50};
 for (var key in myObject){
     console.log(key+myObject[key]);
 }
@@ -33,7 +33,7 @@ for(var i = 5; i>=0; i--){
 }
 // Loop over an Array, forwards and backwards
 var myArray = [1,2,3,4,5]
-for(var i=0; i<= myArray.length; i++){
+for(var i=0; i <= myArray.length-1; i++){
     console.log(myArray[i]);
 }
 for (i=myArray.length-1; i>=0; i--){
