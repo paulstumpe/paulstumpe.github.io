@@ -36,11 +36,20 @@ i %=2; //i will be assigned to the REMAINDER of i divided by 2.
 //logical operators allow us to flip the statements testing, like with the bang 
 // operator. or can be used to test for the truth of multiple
 //statements at once
-1<2 && 3<4;
+1<2 && 3<4; //when the computer evaluates a logical operator it will result in a
+//true or false boolean value. In the case of the logical and "&&" operator it
+//will become a false value if the expressions on either side are falsey. Put another
+//way, it will only return true if both expressions are truthy. Here, both values
+//are true, so we will return true.
+1<2 || 3===4; //the logical or "||" operator works differently. It returns true if
+//either of the expressions are truethy values. So in this case, while 3 does not
+//equal 4, 1 IS less than 2, so this will evaluate to true.
+!true; //The bang operator will also always resolve to true or false, regardless of
+//the data type that follows. It evaluates to true if the following expression is falsey,
+//and evaluates to false if the following expression is truthy. Basically, it inverts the
+//false or true value of the next expression. in this case it would be false.
 // Unary operators (!, typeof, -)
-!true; // "!" This is the bang operator. It inverts the truthiness of the value
-//it operates on. False becomes true, true becomes false, and other values like
-//zero that are evaluated to a falsey value will be evaluted to a truthy value.
+!true; //the bang operator is also a unary operator. It only takes one value to work.
 typeof 20; //would return a string of "number." this operator is a tool to find
 //the data type of a value.
 i = 20;

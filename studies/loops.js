@@ -13,7 +13,7 @@ while  (1 < apple){
 }
 //for loops use a triple set of info in their parentheses. a start condition, an 
 // end/stop condition, and an incrementer.
-for(var i=1; i<10; i++){
+for(var i=0; i<10; i++){
     console.log("hi"); //will say hi ten times.
 }
 //for in loops are special loops useful for iterating objects. since objects 
@@ -25,11 +25,11 @@ for (var key in myObject){
 }
 // Be able to loop any number of times, forward counting up to some limit, backward 
 // counting down to 0
-for(var i=1; i<20; i++){
+for(var i=0; i<20; i++){
     console.log("20 times");//loops twenty times
 }
 for(var i = 5; i>=0; i--){
-    console.log("i") //counts down to zero;
+    console.log(i) //counts down to zero;
 }
 // Loop over an Array, forwards and backwards
 var myArray = [1,2,3,4,5]

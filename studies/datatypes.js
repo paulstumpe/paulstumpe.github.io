@@ -94,8 +94,9 @@ console.log(Infinity * 3);
 // Simple data types on the other hand, can not hold other data types. Operations on simple
 // data types always result in a new simple data type. They don't change the original
 // data, but reassign a binding to a new datapoint. 20 will always be 20. If we look to change 20 to 30
-// by adding 10, we'll simply assign a whole new value of 10 to the binding. Not change that previous 20 
-// to thirty.
+// by adding 10, we'll simply assign a whole new value of 30 to the binding. Not change that previous 20 
+// to thirty. Twenty is still twenty, we rebound our variable to the new number of 30. This is because numbers
+// and all simple data types are immutable.
 
 // Primitive values are passed to a function BY COPY, complex values are BY REFERENCE. What does that mean, and how are they different?
 // passing by copy means we the computer simply looks at that value held there, and copies it
