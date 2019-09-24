@@ -8,9 +8,10 @@
 //while loops will go as long as the condition we state evaluates to true at the 
 // end of the codeblock
 var apple =5;
-while  (1 < apple){
+while  (0 < apple){
     apple -1;
-}
+} //this will reduce our amount of apples until the amount of apples is  not 
+//greater than zero.
 //for loops use a triple set of info in their parentheses. a start condition, an 
 // end/stop condition, and an incrementer.
 for(var i=0; i<10; i++){
